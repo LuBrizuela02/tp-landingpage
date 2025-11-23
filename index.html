@@ -14,115 +14,107 @@
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="#" class="logo">
-                <img src="images/logo.svg" alt="Room Furniture Logo">
-            </a>
-
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-            <!-- BTN MOBILE -->
-
-            <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-                
-                <img src="images/icon-hamburger.svg" alt="">
-
-            </button>  
-
-        </nav>
-
-    </header>
-
-
-
-    <main>
-
-        <!-- HERO SECTION -->
-
-        <!--Por defecto es en desktop, dsp para Mobile mediante CSS-->
-
-        <section id="hero" class="hero" aria-label="Hero section">
-            
-            <div class="hero-image">
-
-                <img src="images/desktop-image-hero-1.jpg" alt="Modern living room with minimalist furniture">
-
-            </div>
-
-
-        <article class="hero-text">
-
-            <h1>Discover innovative ways to decorate</h1>
-
-                <p>
-                    We provide unmatched quality, comfort, and style for property owners across the country.
-                    Our experts combine form and function in bringing your vision to life. Create a room in your
-                    own style with our collection and make your property a reflection of you.
-                </p>
-
-                <a href="#shop" class="shop-now"> SHOP NOW 
-                <img src="images/icon-arrow.svg" alt="Icon arrow">
+    <div class="container">
+        <header>
+            <nav aria-label="Main navigation">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="Room Furniture Logo">
                 </a>
 
-                <!-- Flechas del slider -->
+                <ul class="nav-links">
+                    <li><a href="#hero">home</a></li>
+                    <li><a href="#shop">shop</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
 
-                <div class="hero-controls">
-                    <button aria-label="Previous image">
-                        <img src="images/icon-angle-left.svg" alt="Angle left">
-                    </button>
-                    <button aria-label="Next image">
-                        <img src="images/icon-angle-right.svg" alt="Angle right">
-                    </button>
+                <!-- BTN MOBILE -->
+
+                <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu" id="icon-hamburger">
+                    
+                    <img src="images/icon-hamburger.svg" alt="">
+
+                </button>  
+
+            </nav>
+            <!-- HERO SECTION -->
+
+            <!--Por defecto es en desktop, dsp para Mobile mediante CSS-->
+
+            <section id="hero" class="hero" aria-label="Hero section">
+                
+                <div class="hero-image">
+
+                    <img src="images/desktop-image-hero-1.jpg" alt="Modern living room with minimalist furniture" id="hero-main-image">
+
                 </div>
 
-        </article>
+                <article class="hero-text">
 
-        </section>
+                    <h1>Discover innovative ways to decorate</h1>
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="about" aria-labelledby="about-title">
-            
-            <h2 id="about-title">About our furniture</h2>
+                        <p>
+                            We provide unmatched quality, comfort, and style for property owners across the country.
+                            Our experts combine form and function in bringing your vision to life. Create a room in your
+                            own style with our collection and make your property a reflection of you.
+                        </p>
 
-            <div class="about-image left">
-                <img src="images/image-about-dark.jpg" alt="Dark modern living room furniture">
-            </div>
+                        <a href="#shop" class="shop-now"> SHOP NOW 
+                        <img src="images/icon-arrow.svg" alt="Icon arrow">
+                        </a>
 
-            <article class="about-content">
+                        <!-- Flechas del slider -->
 
-                <p>
-                    Our multifunctional collection blends design and function to suit your individual taste.
-                    Make each room unique, or pick a cohesive theme that best express your interests
-                    and what inspires you. Find the furniture pieces you need, from traditional to
-                    contemporary styles or anything in between. Product specialists are available to
-                    help you create your dream space.
-                </p>
+                        <div class="hero-controls">
+                            <button aria-label="Previous image"><img src="images/icon-angle-left.svg" alt="Angle left"></button><button aria-label="Next image"><img src="images/icon-angle-right.svg" alt="Angle right"></button>
+                        </div>
 
-            </article>
+                </article>
 
-            <div class="about-image right">
-                <img src="images/image-about-light.jpg" alt="Light minimalist chair in a bright room">
-            </div>
-        </section>
+            </section>
 
-        <!-- Contacto -->
+        </header>
 
-        <section id="contact" aria-label="Contact information">
-            <h2>Contact</h2>
-            <p>Email: info@roomfurniture.com</p>
-        </section>
 
-    </main>
 
-    <footer>
-        <p>Room Furniture - Frontend Project 2025</p>
-    </footer>
+        <main>
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about" aria-labelledby="about-title">
 
+                <div class="about-image left">
+                    <img src="images/image-about-dark.jpg" alt="Dark modern living room furniture">
+                </div>
+
+                <article class="about-content">
+                    <h2 id="about-title">About our furniture</h2>
+
+                    <p>
+                        Our multifunctional collection blends design and function to suit your individual taste.
+                        Make each room unique, or pick a cohesive theme that best express your interests
+                        and what inspires you. Find the furniture pieces you need, from traditional to
+                        contemporary styles or anything in between. Product specialists are available to
+                        help you create your dream space.
+                    </p>
+
+                </article>
+
+                <div class="about-image right">
+                    <img src="images/image-about-light.jpg" alt="Light minimalist chair in a bright room">
+                </div>
+            </section>
+
+            <!-- Contacto -->
+
+            <section id="contact" aria-label="Contact information">
+                <h2>Contact</h2>
+                <p>Email: info@roomfurniture.com</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Room Furniture - Frontend Project 2025</p>
+        </footer>
+    </div>
 </body>
 </html>
