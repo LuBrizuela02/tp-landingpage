@@ -8,65 +8,94 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Se agregan los weights 500, 600 y 700 en styles.css -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="#" class="logo">
-                <img src="" alt="">
+                <img src="images/logo.svg" alt="Room Furniture Logo">
             </a>
 
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Botón mobile (se estiliza después) -->
-            <!-- <button class="menu-btn" aria-label="Open menu">☰</button> -->
+            <!-- BTN MOBILE -->
+
+            <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                
+                <img src="images/icon-hamburger.svg" alt="">
+
+            </button>  
+
         </nav>
+
     </header>
+
+
 
     <main>
 
         <!-- HERO SECTION -->
-        <section class="hero">
 
-            <h1 class="hero-title">Discover innovative ways to decorate</h1>
+        <!--Por defecto es en desktop, dsp para Mobile mediante CSS-->
 
-            <div class="hero-image">
-                <!-- Imagen desktop o mobile según CSS -->
-                <img src="" alt="">
-            </div>
+        <section id="hero" class="hero" aria-label="Hero section">
             
-            <div class="hero-content">
+            <div class="hero-image">
+
+                <img src="images/desktop-image-hero-1.jpg" alt="Modern living room with minimalist furniture">
+
+            </div>
+
+
+        <article class="hero-text">
+
+            <h1>Discover innovative ways to decorate</h1>
+
                 <p>
                     We provide unmatched quality, comfort, and style for property owners across the country.
-                    Our experts combine form and function in bringing your vision to life.
-                    Create a room in your own style with our collection and make your property
-                    a reflection of you and what you love.
+                    Our experts combine form and function in bringing your vision to life. Create a room in your
+                    own style with our collection and make your property a reflection of you.
                 </p>
-            </div>
-            
-            <a href="#" class="shop-now">SHOP NOW</a>
+
+                <a href="#shop" class="shop-now"> SHOP NOW 
+                <img src="images/icon-arrow.svg" alt="Icon arrow">
+                </a>
+
+                <!-- Flechas del slider -->
+
+                <div class="hero-controls">
+                    <button aria-label="Previous image">
+                        <img src="images/icon-angle-left.svg" alt="Angle left">
+                    </button>
+                    <button aria-label="Next image">
+                        <img src="images/icon-angle-right.svg" alt="Angle right">
+                    </button>
+                </div>
+
+        </article>
 
         </section>
 
         <!-- ABOUT SECTION -->
-        <section class="about">
+        <section id="about" class="about" aria-labelledby="about-title">
             
-            <h2 class="about-title">About our furniture</h2>
+            <h2 id="about-title">About our furniture</h2>
 
-            <div class="about-image">
-                <img src="" alt="">
+            <div class="about-image left">
+                <img src="images/image-about-dark.jpg" alt="Dark modern living room furniture">
             </div>
 
-            <div class="about-content">
+            <article class="about-content">
+
                 <p>
                     Our multifunctional collection blends design and function to suit your individual taste.
                     Make each room unique, or pick a cohesive theme that best express your interests
@@ -74,11 +103,19 @@
                     contemporary styles or anything in between. Product specialists are available to
                     help you create your dream space.
                 </p>
-            </div>
 
-            <div class="about-image-2">
-                <img src="" alt="">
+            </article>
+
+            <div class="about-image right">
+                <img src="images/image-about-light.jpg" alt="Light minimalist chair in a bright room">
             </div>
+        </section>
+
+        <!-- Contacto -->
+
+        <section id="contact" aria-label="Contact information">
+            <h2>Contact</h2>
+            <p>Email: info@roomfurniture.com</p>
         </section>
 
     </main>
