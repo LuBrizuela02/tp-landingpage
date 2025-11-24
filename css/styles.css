@@ -1,11 +1,13 @@
-/*Generales*/
+/* =========================
+   GENERALES
+========================= */
 
 :root {
     --dark-gray: hsl(0, 0%, 63%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --very-dark-gray: hsl(0, 0%, 27%);
-  }  
+}  
 
 * {
     box-sizing: border-box;
@@ -17,85 +19,86 @@
 
 html, body {
     overflow-x: hidden;
-  }
+}
 
-/*Grin principal*/
+/* =========================
+   GRID PRINCIPAL
+========================= */
+
 .container {
     display: grid;
-    gap: 0; /*in espaciado entre elementos del grid*/
-  
+    gap: 0;
     grid-template-areas:
-      "header header header"
-      "main  main  main";
-  
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-  }
-  
-  /* Areas */
-  header {
+      "header header"
+      "main  main";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+
+header {
     grid-area: header;
-  }
-  
-  main {
+}
+main {
     grid-area: main;
-  }
+}
 
+/* =========================
+   HERO (DESKTOP BASE)
+========================= */
 
-  /*Elementos del header - primera fila del grid*/
-  .hero {
-    display: flex; /*Alinea los elementos de la fila 1 de forma horizontal*/
-    position: relative; /* Para poder pocisionar elementos hijo de forma absoluta */
-    height: 100%; 
-  }
+.hero {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
 
-  .hero-image {
+.hero-image {
     flex-basis: 65%;
-  }
+    position: relative; 
+}
 
-  .hero-text {
+.hero-text {
     flex-basis: 35%;
-  }
+    position: relative;
+    padding: 6vw 5vw 0 5vw;
+}
 
-  .hero-image img {
+.hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;                  
-  }
-  
-  nav {
+}
+
+/* NAV */
+nav {
     position: absolute;
-    display: flex; /*Para que los elementos dentro del nav se ordenen horizontalmente*/
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 50px;   
+    padding: 40px 50px;
     color: var(--white);
-    z-index: 10; 
-    background: transparent; 
-  }
-
-  .logo {
-    margin-right: 40px;
-  }
-
-  .nav-links {
-    display: flex; /*Para que los links del nav se vean horizontales*/
-    align-items: flex-start; /*Para que los links se alinien arriba y se acomoden al icono*/
-    justify-content: space-between; /*Para que los links se separen entre si*/
-    list-style: none; /*Quita estilos de los elementos de la lista*/
-  }
-
-  .nav-links a {
-    text-decoration: none; /* Quita estilos por defecto de los a */
-    color: inherit; /* Da el color blanco al texto */
-    margin: 0 15px; /* Da espacio entre los links */
-    font-size: 15px;
+    z-index: 10;
+    background: transparent;
 }
 
-.hero-text {
-    padding: 6vw 5vw 0 5vw; /*arriba - derecha - abajo - izquierda*/
+.logo {
+    margin-right: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 15px;
+    font-size: 15px;
 }
 
 h1 {
@@ -118,35 +121,81 @@ h1 {
     font-weight: bold;
 }
 
+
+/* =========================
+   CONTROLES GENERALES
+========================= */
+
 .hero-controls {
-    position: absolute;
-    bottom: 0;
-    left: 65%; /*Se posiciona un 65% a la izquierda porque es el % que ocupa la caja que contiene la imagen*/
+  display: flex;
 }
 
 .hero-controls button {
-    width: 60px;       
-    height: 60px;
-    background: var(--black);
-    border: none;
-    cursor: pointer;
+  background: var(--black);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* =========================
+   DESKTOP
+========================= */
+
+.hero-controls-desktop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-controls-desktop button {
+  width: 60px;
+  height: 60px;
+}
+
+.hero-controls-desktop button img {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+.hero-controls-mobile {
+  display: none;
+}
+
+.hero-controls-mobile button {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-controls-mobile button img {
+  width: 10px;
+  height: 10px;
+}
+
+
 #icon-hamburger {
-    display: none; /*Oculta le menu hamburguesa cuando se utiliza desktop*/
+    display: none;
 }
 
 footer {
-display: none;
+    display: none;
 }
 
 #contact {
-display: none;
+    display: none;
 }
 
-/*Elementos del main - segunda fila del grid*/
+/* =========================
+   MAIN ABOUT (DESKTOP)
+========================= */
+
 .about {
-    display: flex; /*Alinea los elementos de la fila 2 de forma horizontal*/
+    display: flex;
     justify-content: space-between;
 }
 
@@ -155,7 +204,7 @@ display: none;
     height: 100%;
     object-fit: cover;
     display: block;
-  }
+}
 
 .left {
     flex-basis: 30%;
@@ -173,13 +222,119 @@ display: none;
 }
 
 .about-content h2 {
-    font-size: 18px;
-    color: var(--black);
-    margin: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
 .about-content p {
     color: var(--dark-gray);
     line-height: 1.5;
     margin: 0 20px;
+}
+
+/* =========================
+   MOBILE — 375px
+========================= */
+
+@media (max-width: 376px) {
+
+  .container {
+    grid-template-areas:
+      "header"
+      "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  /* NAV */
+  nav {
+    padding: 20px 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo{
+    margin: 0
+  }
+  
+  .logo img{
+    width: 50px;
+  }
+
+  #icon-hamburger {
+    display: block;
+    position: absolute;
+    left: 25px;
+    width: 15px;
+  }
+
+  /* HERO MOBILE */
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    padding: 40px 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-controls-desktop {
+    display: none;
+  }
+
+  .hero-controls-mobile {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* ABOUT MOBILE */
+  .about {
+    flex-direction: column;
+  }
+
+  .about img {
+    height: auto;
+  }
+
+  .left,
+  .right,
+  .about-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .about-content {
+    padding: 40px 25px;
+  }
+
+  .about-content h2 {
+    margin: 0 0 20px 0;
+  }
+
+  footer {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
 }
