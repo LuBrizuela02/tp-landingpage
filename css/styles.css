@@ -60,7 +60,7 @@ main {
 .hero-text {
     flex-basis: 35%;
     position: relative;
-    padding: 6vw 5vw 0 5vw;
+    padding: 6vw 5vh 6vw 5vh;
 }
 
 .hero-image img {
@@ -219,6 +219,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 20px;
 }
 
 .about-content h2 {
@@ -231,14 +232,13 @@ footer {
 .about-content p {
     color: var(--dark-gray);
     line-height: 1.5;
-    margin: 0 20px;
 }
 
 /* =========================
    MOBILE — 375px
 ========================= */
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
 
   .container {
     grid-template-areas:
